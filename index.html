@@ -41,6 +41,7 @@
                     Streamline your property management with Tenanta's comprehensive platform. 
                     Manage properties, tenants, billing, and analytics all in one place.
                 </p>
+
                 <div class="hero-buttons">
                     <a href="https://forms.gle/gnna1VKr7vneYpWh6" target="_blank" class="btn btn-primary">Request Demo</a>
                     <a href="features.html" class="btn btn-secondary">
@@ -48,6 +49,7 @@
                         Watch Demo
                     </a>
                 </div>
+                
                 <div class="hero-stats">
                     <div class="stat">
                         <span class="stat-number">500+</span>
@@ -68,6 +70,71 @@
                     <div class="phone-frame">
                         <div class="screen">
                             <div class="app-interface">
+                                <!-- Sidebar Overlay -->
+                                <div class="sidebar-overlay" id="sidebarOverlay"></div>
+                                
+                                <!-- Sidebar Menu -->
+                                <div class="sidebar-menu" id="sidebarMenu">
+                                    <div class="sidebar-header">
+                                        <div class="user-profile">
+                                            <div class="user-avatar">TH</div>
+                                            <div class="user-info">
+                                                <div class="user-name">Thiarara</div>
+                                                <div class="user-role">Property Manager</div>
+                                            </div>
+                                        </div>
+                                        <div class="sidebar-close" onclick="toggleSidebar()">
+                                            <i class="fas fa-times"></i>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="sidebar-content">
+                                        <div class="menu-section">
+                                            <div class="menu-title">Main</div>
+                                            <div class="menu-item active" data-menu="dashboard">
+                                                <i class="fas fa-home"></i>
+                                                <span>Dashboard</span>
+                                            </div>
+                                            <div class="menu-item" data-menu="properties">
+                                                <i class="fas fa-building"></i>
+                                                <span>Properties</span>
+                                            </div>
+                                            <div class="menu-item" data-menu="tenants">
+                                                <i class="fas fa-users"></i>
+                                                <span>Tenants</span>
+                                            </div>
+                                            <div class="menu-item" data-menu="billing">
+                                                <i class="fas fa-file-invoice-dollar"></i>
+                                                <span>Billing</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="menu-section">
+                                            <div class="menu-title">Analytics</div>
+                                            <div class="menu-item" data-menu="analytics">
+                                                <i class="fas fa-chart-line"></i>
+                                                <span>Analytics</span>
+                                            </div>
+                                            <div class="menu-item" data-menu="reports">
+                                                <i class="fas fa-chart-bar"></i>
+                                                <span>Reports</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="menu-section">
+                                            <div class="menu-title">Management</div>
+                                            <div class="menu-item" data-menu="maintenance">
+                                                <i class="fas fa-wrench"></i>
+                                                <span>Maintenance</span>
+                                            </div>
+                                            <div class="menu-item" data-menu="settings">
+                                                <i class="fas fa-cog"></i>
+                                                <span>Settings</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <!-- Status Bar -->
                                 <div class="status-bar">
                                     <span class="time">9:41</span>
@@ -78,23 +145,23 @@
                                     </div>
                                 </div>
 
+                                <!-- App Header with clickable menu -->
+                                <div class="app-header">
+                                    <div class="menu-icon" onclick="toggleSidebar()">
+                                        <i class="fas fa-bars"></i>
+                                    </div>
+                                    <div class="app-title">
+                                        <div class="title-main">Tenanta</div>
+                                        <div class="title-sub">Dashboard</div>
+                                    </div>
+                                    <div class="notification-badge">
+                                        <i class="fas fa-bell"></i>
+                                        <span class="badge">3</span>
+                                    </div>
+                                </div>
+
                                 <!-- Scrollable Content -->
                                 <div class="app-content">
-                                    <!-- App Header -->
-                                    <div class="app-header">
-                                        <div class="menu-icon">
-                                            <i class="fas fa-bars"></i>
-                                        </div>
-                                        <div class="app-title">
-                                            <div class="title-main">Tenanta</div>
-                                            <div class="title-sub">Dashboard</div>
-                                        </div>
-                                        <div class="notification-badge">
-                                            <i class="fas fa-bell"></i>
-                                            <span class="badge">3</span>
-                                        </div>
-                                    </div>
-
                                     <!-- Welcome Section -->
                                     <div class="welcome-section">
                                         <div class="greeting">Good morning, Thiarara!</div>
@@ -371,6 +438,36 @@
         </div>
     </section>
 
+    <!-- New Residence Hub Section -->
+    <section class="residence-hub-section">
+        <div class="container">
+            <div class="residence-hub-card">
+                <div class="hub-badge">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>New</span>
+                </div>
+                <h2>Introducing Residence Hub</h2>
+                <p>Companion app for tenants to pay rent, submit maintenance requests, and communicate with property managers seamlessly.</p>
+                
+                <div class="hub-apps">
+                    <div class="app-icon tenanta">
+                        <i class="fas fa-building"></i>
+                        <span>Tenanta</span>
+                        <small>For Managers</small>
+                    </div>
+                    <div class="connection-line">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <div class="app-icon residence">
+                        <i class="fas fa-home"></i>
+                        <span>Residence Hub</span>
+                        <small>For Tenants</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Features Preview -->
     <section class="features-preview">
         <div class="container">
@@ -562,14 +659,3 @@
     <script src="scripts/main.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-

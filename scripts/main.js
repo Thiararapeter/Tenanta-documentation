@@ -251,6 +251,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize phone mockup functionality
     initPhoneMockup();
 
+    // Initialize auto sidebar for demo
+    initAutoSidebar();
+    
+    // Initialize sidebar interactions
+    initSidebarInteractions();
+
     console.log('Main JavaScript loaded successfully!');
 });
 
@@ -292,25 +298,38 @@ function initPhoneMockup() {
     }
 }
 
-// Sidebar toggle functionality
-function toggleSidebar() {
-    const sidebar = document.getElementById('sidebarMenu');
-    const overlay = document.getElementById('sidebarOverlay');
-
-    if (sidebar && overlay) {
-        const isActive = sidebar.classList.contains('active');
+// Auto-open sidebar functionality for mobile mockup
+function initAutoSidebar() {
+    // Auto-open sidebar after 10 seconds
+    setTimeout(() => {
+        const sidebar = document.getElementById('sidebarMenu');
+        const overlay = document.getElementById('sidebarOverlay');
         
-        if (isActive) {
-            sidebar.classList.remove('active');
-            overlay.classList.remove('active');
-        } else {
+        if (sidebar && overlay) {
             sidebar.classList.add('active');
             overlay.classList.add('active');
+            
+            // Auto-close after 4 seconds
+            setTimeout(() => {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            }, 4000);
         }
-    }
+    }, 10000);
 }
 
-// Add sidebar menu interactions
+// Initialize auto sidebar when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    // ... existing code ...
+    
+    // Initialize auto sidebar for demo
+    initAutoSidebar();
+    
+    // Initialize sidebar interactions
+    initSidebarInteractions();
+});
+
+// Enhanced sidebar interactions
 function initSidebarInteractions() {
     const menuItems = document.querySelectorAll('.menu-item');
 
@@ -318,46 +337,18 @@ function initSidebarInteractions() {
         item.addEventListener('click', function() {
             // Remove active class from all items
             menuItems.forEach(mi => mi.classList.remove('active'));
-
+            
             // Add active class to clicked item
             this.classList.add('active');
-
-            // Handle specific menu item actions
-            const menuText = this.querySelector('span').textContent;
-            handleMenuItemClick(menuText);
-
+            
             // Add ripple effect
             const ripple = document.createElement('div');
-            ripple.style.cssText = `
-                position: absolute;
-                border-radius: 50%;
-                background: rgba(255, 255, 255, 0.3);
-                transform: scale(0);
-                animation: ripple 0.6s linear;
-                pointer-events: none;
-                width: 100%;
-                height: 100%;
-                left: 0;
-                top: 0;
-            `;
-
-            this.style.position = 'relative';
+            ripple.className = 'menu-ripple';
             this.appendChild(ripple);
-
+            
             setTimeout(() => {
                 ripple.remove();
             }, 600);
-        });
-
-        // Hover effects for menu items
-        item.addEventListener('mouseenter', function() {
-            if (!this.classList.contains('active')) {
-                this.style.transform = 'translateX(5px)';
-            }
-        });
-
-        item.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateX(0)';
         });
     });
 }
@@ -1073,6 +1064,8 @@ function animateCounterTo(element, target, prefix = '') {
 // Make functions globally available
 window.toggleSidebar = toggleSidebar;
 window.handleMenuItemClick = handleMenuItemClick;
+
+
 
 
 
