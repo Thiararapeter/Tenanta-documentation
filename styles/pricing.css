@@ -113,6 +113,43 @@ input:checked + .slider:before {
     border: 2px solid transparent;
 }
 
+/* Starter Plan - Light green gradient */
+.pricing-card:first-child {
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #bbf7d0 100%);
+    border: 2px solid #22c55e;
+}
+
+.pricing-card:first-child .plan-header h3 {
+    color: #166534;
+}
+
+.pricing-card:first-child .amount {
+    color: #166534;
+}
+
+.pricing-card:first-child .plan-features li i {
+    color: #22c55e;
+}
+
+/* Enterprise Plan - Light purple gradient */
+.pricing-card:last-child {
+    background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 50%, #e9d5ff 100%);
+    border: 2px solid #a855f7;
+}
+
+.pricing-card:last-child .plan-header h3 {
+    color: #7c2d12;
+}
+
+.pricing-card:last-child .amount,
+.pricing-card:last-child .contact-info {
+    color: #7c2d12;
+}
+
+.pricing-card:last-child .plan-features li i {
+    color: #a855f7;
+}
+
 .pricing-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
@@ -191,6 +228,15 @@ input:checked + .slider:before {
 }
 
 /* Enterprise pricing styles */
+.contact-info {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    text-align: center;
+    display: block;
+    margin: 1rem 0;
+}
+
 .enterprise-price .contact-text {
     font-size: 1.5rem;
     font-weight: 600;
@@ -229,6 +275,72 @@ input:checked + .slider:before {
 
 .plan-footer {
     text-align: center;
+}
+
+/* Button styles for pricing cards */
+.pricing-card .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    min-height: 48px;
+    min-width: 140px;
+    border: none;
+    position: relative;
+    z-index: 1;
+}
+
+.pricing-card .btn-primary {
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #2563eb;
+}
+
+.pricing-card .btn-primary:hover {
+    background: #2563eb;
+    border-color: #2563eb;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.pricing-card .btn-outline {
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #2563eb;
+}
+
+.pricing-card .btn-outline:hover {
+    background: #2563eb;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* Featured card button styles */
+.pricing-card.featured .btn-primary {
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #fbbf24;
+}
+
+.pricing-card.featured .btn-primary:hover {
+    background: #fbbf24;
+    border-color: #fbbf24;
+    color: #000000;
+}
+
+/* Ensure buttons are always visible */
+.plan-footer .btn {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline-flex !important;
 }
 
 .feature-comparison {

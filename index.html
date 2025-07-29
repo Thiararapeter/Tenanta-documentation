@@ -12,10 +12,10 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">
+            <div class="nav-logo">
                 <i class="fas fa-building"></i>
                 <span>Tenanta</span>
-            </a>
+            </div>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link active">Home</a></li>
                 <li><a href="features.html" class="nav-link">Features</a></li>
@@ -52,15 +52,15 @@
                 
                 <div class="hero-stats">
                     <div class="stat">
-                        <span class="stat-number">10+</span>
+                        <span class="stat-number counter-number plus-counter" data-target="10">0</span>
                         <span class="stat-label">Happy Customers</span>
                     </div>
                     <div class="stat">
-                        <span class="stat-number">50+</span>
+                        <span class="stat-number counter-number plus-counter" data-target="50">0</span>
                         <span class="stat-label">Happy Tenants</span>
                     </div>
                     <div class="stat">
-                        <span class="stat-number">99.9%</span>
+                        <span class="stat-number counter-number uptime-counter" data-target="99.9">90</span>
                         <span class="stat-label">Uptime</span>
                     </div>
                 </div>
@@ -657,5 +657,6 @@
     </footer>
 
     <script src="scripts/main.js"></script>
+    <script src="scripts/stats-counter.js"></script>
 </body>
 </html>

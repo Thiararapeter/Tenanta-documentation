@@ -86,41 +86,41 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
 
-    // Counter animation for stats
-    function animateCounter(element, target, duration = 2000) {
-        let start = 0;
-        const increment = target / (duration / 16);
-        
-        function updateCounter() {
-            start += increment;
-            if (start < target) {
-                element.textContent = Math.floor(start);
-                requestAnimationFrame(updateCounter);
-            } else {
-                element.textContent = target;
-            }
-        }
-        
-        updateCounter();
-    }
+    // Counter animation for stats - DISABLED (using stats-counter.js instead)
+    // function animateCounter(element, target, duration = 2000) {
+    //     let start = 0;
+    //     const increment = target / (duration / 16);
+    //     
+    //     function updateCounter() {
+    //         start += increment;
+    //         if (start < target) {
+    //             element.textContent = Math.floor(start);
+    //             requestAnimationFrame(updateCounter);
+    //         } else {
+    //             element.textContent = target;
+    //         }
+    //     }
+    //     
+    //     updateCounter();
+    // }
 
-    // Animate counters when they come into view
-    const statNumbers = document.querySelectorAll('.stat-number');
-    const statObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const target = parseInt(entry.target.textContent.replace(/[^\d]/g, ''));
-                if (target && !entry.target.classList.contains('animated')) {
-                    entry.target.classList.add('animated');
-                    animateCounter(entry.target, target);
-                }
-            }
-        });
-    }, { threshold: 0.5 });
+    // Animate counters when they come into view - DISABLED (using stats-counter.js instead)
+    // const statNumbers = document.querySelectorAll('.stat-number');
+    // const statObserver = new IntersectionObserver(function(entries) {
+    //     entries.forEach(entry => {
+    //         if (entry.isIntersecting) {
+    //             const target = parseInt(entry.target.textContent.replace(/[^\d]/g, ''));
+    //             if (target && !entry.target.classList.contains('animated')) {
+    //                 entry.target.classList.add('animated');
+    //                 animateCounter(entry.target, target);
+    //             }
+    //         }
+    //     });
+    // }, { threshold: 0.5 });
 
-    statNumbers.forEach(stat => {
-        statObserver.observe(stat);
-    });
+    // statNumbers.forEach(stat => {
+    //     statObserver.observe(stat);
+    // });
 
     // FAQ functionality
     const faqItems = document.querySelectorAll('.faq-item');
