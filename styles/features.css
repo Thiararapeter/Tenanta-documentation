@@ -381,3 +381,30 @@
     line-height: 1.6;
 }
 
+/* Responsive design for screenshots grid */
+@media (max-width: 1200px) {
+    .screenshots-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .screenshots-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .screenshot-item {
+        padding: 1.5rem;
+    }
+
+    .feature-icon-large {
+        width: 100px;
+        height: 100px;
+    }
+
+    .feature-icon-large i {
+        font-size: 2.5rem;
+    }
+}
+

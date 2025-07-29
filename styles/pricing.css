@@ -216,6 +216,40 @@ input:checked + .slider:before {
     text-align: center;
 }
 
+.plan-footer .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.plan-footer .btn-outline {
+    background: transparent;
+    color: #2563eb;
+    border: 2px solid #2563eb;
+}
+
+.plan-footer .btn-outline:hover {
+    background: #2563eb;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.plan-footer .btn-primary {
+    background: #2563eb;
+    color: white;
+    border: 2px solid #2563eb;
+}
+
+.plan-footer .btn-primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
 .feature-comparison {
     padding: 80px 0;
 }
