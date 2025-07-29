@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - Tenanta Property Management</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/features.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-building"></i>
+                <span>Tenanta</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="features.html" class="nav-link active">Features</a></li>
+                <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="https://forms.gle/gnna1VKr7vneYpWh6" target="_blank" class="nav-link cta-button">Get Started</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="features-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Comprehensive Property Management Features</h1>
+                <p>Everything you need to manage properties, tenants, and finances in one powerful platform</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Categories -->
+    <section class="feature-categories">
+        <div class="container">
+            <div class="category-tabs">
+                <button class="tab-button active" data-category="property">Property Management</button>
+                <button class="tab-button" data-category="tenant">Tenant Management</button>
+                <button class="tab-button" data-category="billing">Billing & Payments</button>
+                <button class="tab-button" data-category="analytics">Analytics & Reports</button>
+                <button class="tab-button" data-category="mobile">Mobile & Tech</button>
+            </div>
+
+            <!-- Property Management Features -->
+            <div class="feature-category active" id="property">
+                <div class="category-header">
+                    <h2>Property Management</h2>
+                    <p>Comprehensive tools to manage all aspects of your properties</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-detail">
+                        <div class="feature-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Multi-Property Dashboard</h3>
+                        <p>Manage unlimited properties from a single dashboard with real-time occupancy rates, income tracking, and performance metrics.</p>
+                        <ul class="feature-list">
+                            <li>Property performance comparison</li>
+                            <li>Occupancy rate tracking</li>
+                            <li>Income and expense monitoring</li>
+                            <li>Property image galleries</li>
+                        </ul>
+                    </div>
+                    <div class="feature-detail">
+                        <div class="feature-icon">
+                            <i class="fas fa-door-open"></i>
+                        </div>
+                        <h3>Room Management</h3>
+                        <p>Track individual rooms with detailed status monitoring, pricing, and amenity management.</p>
+                        <ul class="feature-list">
+                            <li>Room status tracking (vacant, occupied, maintenance)</li>
+                            <li>Dynamic pricing management</li>
+                            <li>Amenity association</li>
+                            <li>Room availability calendar</li>
+                        </ul>
+                    </div>
+                    <div class="feature-detail">
+                        <div class="feature-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Location Integration</h3>
+                        <p>Interactive maps and location services for better property visualization and management.</p>
+                        <ul class="feature-list">
+                            <li>Interactive property maps</li>
+                            <li>Location-based search</li>
+                            <li>Neighborhood analytics</li>
+                            <li>GPS integration</li>
+                        </ul>
+                    </div>
+                    <div class="feature-detail">
+                        <div class="feature-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Maintenance Scheduling</h3>
+                        <p>Streamlined maintenance request handling with vendor management and scheduling tools.</p>
+                        <ul class="feature-list">
+                            <li>Maintenance request tracking</li>
+                            <li>Vendor management</li>
+                            <li>Scheduled maintenance</li>
+                            <li>Cost tracking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tenant Management Features -->
+            <div class="feature-category" id="tenant">
+                <div class="category-header">
+                    <h2>Tenant Management</h2>
+                    <p>Complete tenant lifecycle management from application to move-out</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-detail">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Comprehensive Profiles</h3>
+                        <p>Detailed tenant profiles with contact information, lease details, and payment history.</p>
+                        <ul class="feature-list">
+                            <li>Complete tenant information</li>
+                            <li>Emergency contacts</li>
+                            <li>Lease start and end dates</li>
+                            <li>Tenant status management</li>
+                        </ul>
+                    </div>
+                    <div class="feature-detail">
+                        <div class="feature-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>Advanced Search & Filtering</h3>
+                        <p>Quickly find tenants with powerful search and filtering capabilities.</p>
+                        <ul class="feature-list">
+                            <li>Multi-criteria search</li>
+                            <li>Status-based filtering</li>
+                            <li>Payment history filtering</li>
+                            <li>Property-based grouping</li>
+                        </ul>
+                    </div>
+                    <div class="feature-detail">
+                        <div class="feature-icon">
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <h3>Activity Tracking</h3>
+                        <p>Complete audit trail of all tenant interactions and activities.</p>
+                        <ul class="feature-list">
+                            <li>Activity logs</li>
+                            <li>Communication history</li>
+                            <li>Payment tracking</li>
+                            <li>Maintenance requests</li>
+                        </ul>
+                    </div>
+                    <div class="feature-detail">
+                        <div class="feature-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Tenant Portal</h3>
+                        <p>Self-service portal for tenants to manage their account and requests.</p>
+                        <ul class="feature-list">
+                            <li>Online rent payments</li>
+                            <li>Maintenance requests</li>
+                            <li>Document access</li>
+                            <li>Communication tools</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Billing & Payments Features -->
+            <div class="feature-category" id="billing">
+                <div class="category-header">
+                    <h2>Billing & Payments</h2>
+                    <p>Automated billing system with comprehensive payment tracking</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-detail">
+                        <div class="feature-icon">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                        </div>
+                        <h3>Automated Billing</h3>
+                        <p>Create and manage bills with automatic generation and recurring billing options.</p>
+                        <ul class="feature-list">
+                            <li>Bill templates</li>
+                            <li>Recurring billing (monthly, quarterly, yearly)</li>
+                            <li>Split bills among tenants</li>
+                            <li>Unique bill numbering</li>
+                        </ul>
+                    </div>
+                    <div class="feature-detail">
+                        <div class="feature-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h3>Payment Processing</h3>
+                        <p>Comprehensive payment tracking with multiple payment methods and verification.</p>
+                        <ul class="feature-list">
+                            <li>Multiple payment methods</li>
+                            <li>Payment verification workflow</li>
+                            <li>Automatic receipt generation</li>
+                            <li>Partial payment support</li>
+                        </ul>
+                    </div>
+                    <div class="feature-detail">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Utility Management</h3>
+                        <p>Track utility bills with meter readings and automated calculations.</p>
+                        <ul class="feature-list">
+                            <li>Meter reading tracking</li>
+                            <li>Utility bill categorization</li>
+                            <li>Usage calculations</li>
+                            <li>Cost allocation</li>
+                        </ul>
+                    </div>
+                    <div class="feature-detail">
+                        <div class="feature-icon">
+                            <i class="fas fa-receipt"></i>
+                        </div>
+                        <h3>Receipt Management</h3>
+                        <p>Automatic receipt generation with sequential numbering and PDF export.</p>
+                        <ul class="feature-list">
+                            <li>Sequential receipt numbering</li>
+                            <li>PDF receipt generation</li>
+                            <li>Email delivery</li>
+                            <li>Receipt history</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analytics & Reports Features -->
+            <div class="feature-category" id="analytics">
+                <div class="category-header">
+                    <h2>Analytics & Reports</h2>
+                    <p>Comprehensive reporting and analytics for data-driven decisions</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-detail">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Financial Reports</h3>
+                        <p>Detailed financial reporting with income tracking and expense analysis.</p>
+                        <ul class="feature-list">
+                            <li>Monthly income summaries</li>
+                            <li>Expense tracking reports</li>
+                            <li>Payment method analysis</li>
+                            <li>Custom date ranges</li>
+                        </ul>
+                    </div>
+                    <div class="feature-detail">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <h3>Occupancy Analytics</h3>
+                        <p>Track occupancy rates and trends with predictive forecasting.</p>
+                        <ul class="feature-list">
+                            <li>Real-time occupancy rates</li>
+                            <li>3-month forecasting</li>
+                            <li>Vacancy cost analysis</li>
+                            <li>Lease expiration tracking</li>
+                        </ul>
+                    </div>
+                    <div class="feature-detail">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3>Performance Metrics</h3>
+                        <p>Property performance comparison and ROI calculations.</p>
+                        <ul class="feature-list">
+                            <li>Property comparison</li>
+                            <li>ROI calculations</li>
+                            <li>Performance trends</li>
+                            <li>Benchmark analysis</li>
+                        </ul>
+                    </div>
+                    <div class="feature-detail">
+                        <div class="feature-icon">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <h3>Export & Sharing</h3>
+                        <p>Export reports in multiple formats and share with stakeholders.</p>
+                        <ul class="feature-list">
+                            <li>PDF export</li>
+                            <li>Excel export</li>
+                            <li>Email sharing</li>
+                            <li>Scheduled reports</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile & Tech Features -->
+            <div class="feature-category" id="mobile">
+                <div class="category-header">
+                    <h2>Mobile & Technology</h2>
+                    <p>Modern technology stack with mobile-first design</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-detail">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Cross-Platform Mobile App</h3>
+                        <p>Native mobile experience on iOS and Android with offline capabilities.</p>
+                        <ul class="feature-list">
+                            <li>iOS and Android apps</li>
+                            <li>Offline mode</li>
+                            <li>Push notifications</li>
+                            <li>Real-time sync</li>
+                        </ul>
+                    </div>
+                    <div class="feature-detail">
+                        <div class="feature-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h3>Multi-Language Support</h3>
+                        <p>Support for multiple languages with localized currency formats.</p>
+                        <ul class="feature-list">
+                            <li>English and Kiswahili</li>
+                            <li>Currency localization</li>
+                            <li>Date format localization</li>
+                            <li>RTL language support</li>
+                        </ul>
+                    </div>
+                    <div class="feature-detail">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Security & Privacy</h3>
+                        <p>Enterprise-grade security with data encryption and privacy controls.</p>
+                        <ul class="feature-list">
+                            <li>Row-level security</li>
+                            <li>Data encryption</li>
+                            <li>GDPR compliance</li>
+                            <li>Audit trails</li>
+                        </ul>
+                    </div>
+                    <div class="feature-detail">
+                        <div class="feature-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3>Customizable Interface</h3>
+                        <p>Personalize your experience with themes and customizable dashboards.</p>
+                        <ul class="feature-list">
+                            <li>Dark/Light themes</li>
+                            <li>Custom dashboards</li>
+                            <li>Personalized settings</li>
+                            <li>Quick actions menu</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Screenshots Section -->
+    <section class="app-showcase">
+        <div class="container">
+            <div class="section-header">
+                <h2>See Tenanta in Action</h2>
+                <p>Real screenshots from our mobile and web applications</p>
+            </div>
+            <div class="screenshots-grid">
+                <div class="screenshot-item">
+                    <img src="assets/app-dashboard.png" alt="Dashboard Overview" class="feature-screenshot">
+                    <h3>Dashboard Overview</h3>
+                    <p>Get a complete view of your properties at a glance</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="assets/app-properties.png" alt="Property Management" class="feature-screenshot">
+                    <h3>Property Management</h3>
+                    <p>Manage all your properties from one central location</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="assets/app-tenants.png" alt="Tenant Management" class="feature-screenshot">
+                    <h3>Tenant Management</h3>
+                    <p>Keep track of tenant information and communications</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="assets/app-billing.png" alt="Billing System" class="feature-screenshot">
+                    <h3>Billing & Payments</h3>
+                    <p>Automated billing with payment tracking</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Experience These Features?</h2>
+                <p>Start your free trial today and see how Tenanta can transform your property management</p>
+                <div class="cta-buttons">
+                    <a href="https://forms.gle/gnna1VKr7vneYpWh6" target="_blank" class="btn btn-primary">Request Demo</a>
+                    <a href="contact.html" class="btn btn-outline">Schedule Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-building"></i>
+                        <span>Tenanta</span>
+                    </div>
+                    <p>Comprehensive property management solution for modern landlords and property managers.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/thiararapeter" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.youtube.com/channel/UCG8B01F08eRJE8STS3XkINg" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://github.com/Thiararapeter" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/thiararapeter" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/ThirararaOnline/" target="_blank"><i class="fab fa-facebook"></i></a>
+
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2024</span> Tenanta. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/features.js"></script>
+</body>
+</html>
+
+
+
+
+

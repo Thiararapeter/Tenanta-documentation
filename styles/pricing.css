@@ -1,0 +1,462 @@
+/* Pricing Page Specific Styles */
+
+.pricing-hero {
+    padding: 120px 0 60px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+}
+
+.pricing-hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.pricing-hero p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.billing-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.toggle-label {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.discount-badge {
+    background: #fbbf24;
+    color: #1f2937;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-left: 0.5rem;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: 0.4s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #fbbf24;
+}
+
+input:checked + .slider:before {
+    transform: translateX(30px);
+}
+
+.pricing-plans {
+    padding: 80px 0;
+    background: #f8fafc;
+}
+
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pricing-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    border: 2px solid transparent;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.pricing-card.featured {
+    border-color: #2563eb;
+    transform: scale(1.05);
+}
+
+.pricing-card.featured:hover {
+    transform: scale(1.05) translateY(-5px);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2563eb;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.plan-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.plan-header h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.plan-header p {
+    color: #64748b;
+    margin-bottom: 1.5rem;
+}
+
+.price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.currency {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #64748b;
+}
+
+.amount {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0.25rem;
+}
+
+.period {
+    font-size: 1.1rem;
+    color: #64748b;
+}
+
+.annual-note {
+    font-size: 0.9rem;
+    color: #64748b;
+    font-style: italic;
+}
+
+.plan-features {
+    margin-bottom: 2rem;
+}
+
+.plan-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.plan-features li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: #374151;
+}
+
+.plan-features li i {
+    color: #10b981;
+    margin-right: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.plan-footer {
+    text-align: center;
+}
+
+.feature-comparison {
+    padding: 80px 0;
+}
+
+.comparison-table {
+    overflow-x: auto;
+    margin-top: 2rem;
+}
+
+.comparison-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.comparison-table th {
+    background: #f8fafc;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.comparison-table td:first-child {
+    font-weight: 500;
+    color: #374151;
+}
+
+.comparison-table td:not(:first-child) {
+    text-align: center;
+}
+
+.text-green {
+    color: #10b981;
+}
+
+.text-gray {
+    color: #9ca3af;
+}
+
+.faq {
+    padding: 80px 0;
+    background: #f8fafc;
+}
+
+.faq-grid {
+    display: grid;
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.faq-question {
+    padding: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background: #f8fafc;
+}
+
+.faq-question h4 {
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+}
+
+.faq-question i {
+    color: #64748b;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 1.5rem 1.5rem;
+    max-height: 200px;
+}
+
+.faq-answer p {
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .pricing-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .plans-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .pricing-card.featured {
+        transform: none;
+    }
+    
+    .pricing-card.featured:hover {
+        transform: translateY(-5px);
+    }
+    
+    .comparison-table {
+        font-size: 0.9rem;
+    }
+    
+    .comparison-table th,
+    .comparison-table td {
+        padding: 1rem;
+    }
+    
+    .billing-toggle {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .pricing-hero {
+        padding: 100px 0 40px;
+    }
+    
+    .pricing-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .pricing-card {
+        padding: 2rem;
+    }
+    
+    .amount {
+        font-size: 2.5rem;
+    }
+    
+    .comparison-table th,
+    .comparison-table td {
+        padding: 0.75rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Animation for price switching */
+.amount {
+    transition: opacity 0.3s ease;
+}
+
+.amount.fade-out {
+    opacity: 0;
+}
+
+.amount.fade-in {
+    opacity: 1;
+}
+
+/* Enhanced hover effects */
+.pricing-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.05), transparent);
+    transition: left 0.5s ease;
+}
+
+.pricing-card:hover::before {
+    left: 100%;
+}
+
+/* Special styling for featured card */
+.pricing-card.featured {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.pricing-card.featured .plan-header {
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+.pricing-card.featured .plan-header h3,
+.pricing-card.featured .amount {
+    color: white;
+}
+
+.pricing-card.featured .plan-header p,
+.pricing-card.featured .currency,
+.pricing-card.featured .period,
+.pricing-card.featured .annual-note {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.pricing-card.featured .plan-features li {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.pricing-card.featured .plan-features li i {
+    color: #fbbf24;
+}
+
+/* Loading animation for FAQ */
+.faq-answer {
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}

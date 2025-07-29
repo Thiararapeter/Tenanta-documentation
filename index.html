@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenanta - Property Management Made Simple</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-building"></i>
+                <span>Tenanta</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="features.html" class="nav-link">Features</a></li>
+                <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="https://forms.gle/gnna1VKr7vneYpWh6" target="_blank" class="nav-link cta-button">Get Started</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Property Management Made <span class="highlight">Simple</span></h1>
+                <p class="hero-description">
+                    Streamline your property management with Tenanta's comprehensive platform. 
+                    Manage properties, tenants, billing, and analytics all in one place.
+                </p>
+                <div class="hero-buttons">
+                    <a href="https://forms.gle/gnna1VKr7vneYpWh6" target="_blank" class="btn btn-primary">Request Demo</a>
+                    <a href="features.html" class="btn btn-secondary">
+                        <i class="fas fa-play"></i>
+                        Watch Demo
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Properties Managed</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">2000+</span>
+                        <span class="stat-label">Happy Tenants</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">99.9%</span>
+                        <span class="stat-label">Uptime</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="app-mockup">
+                    <div class="phone-frame">
+                        <div class="screen">
+                            <div class="app-interface">
+                                <!-- Status Bar -->
+                                <div class="status-bar">
+                                    <span class="time">9:41</span>
+                                    <div class="status-icons">
+                                        <i class="fas fa-signal"></i>
+                                        <i class="fas fa-wifi"></i>
+                                        <i class="fas fa-battery-three-quarters"></i>
+                                    </div>
+                                </div>
+
+                                <!-- Scrollable Content -->
+                                <div class="app-content">
+                                    <!-- App Header -->
+                                    <div class="app-header">
+                                        <div class="menu-icon">
+                                            <i class="fas fa-bars"></i>
+                                        </div>
+                                        <div class="app-title">
+                                            <div class="title-main">Tenanta</div>
+                                            <div class="title-sub">Dashboard</div>
+                                        </div>
+                                        <div class="notification-badge">
+                                            <i class="fas fa-bell"></i>
+                                            <span class="badge">3</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Welcome Section -->
+                                    <div class="welcome-section">
+                                        <div class="greeting">Good morning, Thiarara!</div>
+                                        <div class="date">Today • <span class="live-date">Dec 15</span></div>
+                                    </div>
+
+                                    <!-- Featured Property Card -->
+                                    <div class="featured-property">
+                                        <div class="property-header">
+                                            <div class="property-name">Nairobi Heights</div>
+                                            <div class="property-status active">Active</div>
+                                        </div>
+                                        <div class="property-stats">
+                                            <div class="units-info">18 Units • <span class="occupancy">89% Occupied</span></div>
+                                        </div>
+                                        <div class="property-progress">
+                                            <div class="progress-bar">
+                                                <div class="progress-fill" style="width: 89%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Quick Stats Grid -->
+                                    <div class="stats-grid">
+                                        <div class="stat-card income">
+                                            <div class="stat-icon">💰</div>
+                                            <div class="stat-value">KSh 185,000</div>
+                                            <div class="stat-label">Monthly Income</div>
+                                            <div class="stat-change positive">↗ +12%</div>
+                                        </div>
+                                        <div class="stat-card units">
+                                            <div class="stat-icon">🏠</div>
+                                            <div class="stat-value">18</div>
+                                            <div class="stat-label">Total Units</div>
+                                            <div class="stat-change positive">↗ +3</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Quick Actions -->
+                                    <div class="quick-actions">
+                                        <div class="action-item">
+                                            <div class="action-icon">
+                                                <i class="fas fa-plus"></i>
+                                            </div>
+                                            <span>Add Tenant</span>
+                                        </div>
+                                        <div class="action-item">
+                                            <div class="action-icon">
+                                                <i class="fas fa-file-invoice"></i>
+                                            </div>
+                                            <span>Create Bill</span>
+                                        </div>
+                                        <div class="action-item">
+                                            <div class="action-icon">
+                                                <i class="fas fa-chart-bar"></i>
+                                            </div>
+                                            <span>Reports</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Recent Activity Section -->
+                                    <div class="section-header">
+                                        <h3>Recent Activity</h3>
+                                        <span class="view-all">View All</span>
+                                    </div>
+
+                                    <div class="activity-feed">
+                                        <div class="activity-item">
+                                            <div class="activity-icon payment">
+                                                <i class="fas fa-credit-card"></i>
+                                            </div>
+                                            <div class="activity-content">
+                                                <div class="activity-title">Payment Received</div>
+                                                <div class="activity-subtitle">John Doe - Room 101</div>
+                                                <div class="activity-time">2 hours ago</div>
+                                            </div>
+                                            <div class="activity-amount">+KSh 15,000</div>
+                                        </div>
+
+                                        <div class="activity-item">
+                                            <div class="activity-icon maintenance">
+                                                <i class="fas fa-wrench"></i>
+                                            </div>
+                                            <div class="activity-content">
+                                                <div class="activity-title">Maintenance Request</div>
+                                                <div class="activity-subtitle">Sarah Kim - Room 205</div>
+                                                <div class="activity-time">4 hours ago</div>
+                                            </div>
+                                            <div class="activity-status pending">Pending</div>
+                                        </div>
+
+                                        <div class="activity-item">
+                                            <div class="activity-icon tenant">
+                                                <i class="fas fa-user-plus"></i>
+                                            </div>
+                                            <div class="activity-content">
+                                                <div class="activity-title">New Tenant Added</div>
+                                                <div class="activity-subtitle">Mike Johnson - Room 103</div>
+                                                <div class="activity-time">1 day ago</div>
+                                            </div>
+                                            <div class="activity-badge new">New</div>
+                                        </div>
+
+                                        <div class="activity-item">
+                                            <div class="activity-icon bill">
+                                                <i class="fas fa-file-invoice-dollar"></i>
+                                            </div>
+                                            <div class="activity-content">
+                                                <div class="activity-title">Bill Generated</div>
+                                                <div class="activity-subtitle">Monthly rent - December</div>
+                                                <div class="activity-time">2 days ago</div>
+                                            </div>
+                                            <div class="activity-amount">KSh 45,000</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Properties Overview -->
+                                    <div class="section-header">
+                                        <h3>Properties Overview</h3>
+                                        <span class="view-all">Manage</span>
+                                    </div>
+
+                                    <div class="properties-list">
+                                        <div class="property-item">
+                                            <div class="property-image">
+                                                <div class="property-placeholder">🏢</div>
+                                            </div>
+                                            <div class="property-info">
+                                                <div class="property-name">Nairobi Heights</div>
+                                                <div class="property-location">Westlands, Nairobi</div>
+                                                <div class="property-stats-mini">16/18 occupied</div>
+                                            </div>
+                                            <div class="property-revenue">
+                                                <div class="revenue-amount">KSh 120K</div>
+                                                <div class="revenue-label">Monthly</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="property-item">
+                                            <div class="property-image">
+                                                <div class="property-placeholder">🏠</div>
+                                            </div>
+                                            <div class="property-info">
+                                                <div class="property-name">Garden View Apartments</div>
+                                                <div class="property-location">Karen, Nairobi</div>
+                                                <div class="property-stats-mini">12/15 occupied</div>
+                                            </div>
+                                            <div class="property-revenue">
+                                                <div class="revenue-amount">KSh 65K</div>
+                                                <div class="revenue-label">Monthly</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Upcoming Tasks -->
+                                    <div class="section-header">
+                                        <h3>Upcoming Tasks</h3>
+                                        <span class="view-all">View All</span>
+                                    </div>
+
+                                    <div class="tasks-list">
+                                        <div class="task-item urgent">
+                                            <div class="task-priority"></div>
+                                            <div class="task-content">
+                                                <div class="task-title">Lease Renewal - Room 205</div>
+                                                <div class="task-subtitle">Due in 3 days</div>
+                                            </div>
+                                            <div class="task-action">
+                                                <i class="fas fa-chevron-right"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="task-item normal">
+                                            <div class="task-priority"></div>
+                                            <div class="task-content">
+                                                <div class="task-title">Property Inspection</div>
+                                                <div class="task-subtitle">Garden View - Next week</div>
+                                            </div>
+                                            <div class="task-action">
+                                                <i class="fas fa-chevron-right"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="task-item low">
+                                            <div class="task-priority"></div>
+                                            <div class="task-content">
+                                                <div class="task-title">Update Property Photos</div>
+                                                <div class="task-subtitle">Marketing materials</div>
+                                            </div>
+                                            <div class="task-action">
+                                                <i class="fas fa-chevron-right"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Financial Summary -->
+                                    <div class="section-header">
+                                        <h3>Financial Summary</h3>
+                                        <span class="view-all">Details</span>
+                                    </div>
+
+                                    <div class="financial-cards">
+                                        <div class="finance-card">
+                                            <div class="finance-header">
+                                                <span class="finance-label">Total Revenue</span>
+                                                <i class="fas fa-trending-up"></i>
+                                            </div>
+                                            <div class="finance-amount">KSh 2.1M</div>
+                                            <div class="finance-period">This year</div>
+                                        </div>
+
+                                        <div class="finance-card">
+                                            <div class="finance-header">
+                                                <span class="finance-label">Expenses</span>
+                                                <i class="fas fa-receipt"></i>
+                                            </div>
+                                            <div class="finance-amount">KSh 450K</div>
+                                            <div class="finance-period">This year</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Tenant Highlights -->
+                                    <div class="section-header">
+                                        <h3>Tenant Highlights</h3>
+                                        <span class="view-all">View All</span>
+                                    </div>
+
+                                    <div class="tenant-highlights">
+                                        <div class="highlight-card">
+                                            <div class="highlight-icon">⭐</div>
+                                            <div class="highlight-text">
+                                                <div class="highlight-title">5-Star Tenant</div>
+                                                <div class="highlight-subtitle">John Doe - 2 years</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="highlight-card">
+                                            <div class="highlight-icon">🎉</div>
+                                            <div class="highlight-text">
+                                                <div class="highlight-title">New Move-in</div>
+                                                <div class="highlight-subtitle">Sarah Kim - Room 205</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Bottom Spacing -->
+                                    <div class="bottom-spacing"></div>
+                                </div>
+
+                                <!-- Bottom Navigation -->
+                                <div class="bottom-nav">
+                                    <div class="nav-item active">
+                                        <i class="fas fa-home"></i>
+                                        <span>Home</span>
+                                    </div>
+                                    <div class="nav-item">
+                                        <i class="fas fa-building"></i>
+                                        <span>Properties</span>
+                                    </div>
+                                    <div class="nav-item">
+                                        <i class="fas fa-users"></i>
+                                        <span>Tenants</span>
+                                    </div>
+                                    <div class="nav-item">
+                                        <i class="fas fa-chart-line"></i>
+                                        <span>Analytics</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Preview -->
+    <section class="features-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2>Everything You Need to Manage Properties</h2>
+                <p>Comprehensive tools designed for modern property management</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Property Management</h3>
+                    <p>Manage multiple properties with detailed tracking, occupancy rates, and performance metrics.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Tenant Management</h3>
+                    <p>Comprehensive tenant profiles, lease tracking, and communication tools.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3>Billing & Payments</h3>
+                    <p>Automated billing, payment tracking, and financial reporting with receipt generation.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Analytics & Reports</h3>
+                    <p>Detailed insights with income reports, occupancy trends, and performance analytics.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Maintenance Tracking</h3>
+                    <p>Schedule and track maintenance requests with vendor management.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Ready</h3>
+                    <p>Cross-platform mobile app with offline capabilities and real-time sync.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <div class="benefits-content">
+                <div class="benefits-text">
+                    <h2>Why Choose Tenanta?</h2>
+                    <div class="benefit-list">
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Save Time & Money</h4>
+                                <p>Automate routine tasks and reduce administrative overhead by up to 60%</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Increase Revenue</h4>
+                                <p>Optimize occupancy rates and streamline rent collection processes</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Better Tenant Experience</h4>
+                                <p>Self-service portal for tenants with online payments and maintenance requests</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Data-Driven Decisions</h4>
+                                <p>Comprehensive analytics and reporting for informed business decisions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="benefits-image">
+                    <div class="dashboard-preview">
+                        <div class="dashboard-header">
+                            <h3>Analytics Dashboard</h3>
+                        </div>
+                        <div class="dashboard-content">
+                            <div class="chart-placeholder">
+                                <div class="chart-bars">
+                                    <div class="bar" style="height: 60%"></div>
+                                    <div class="bar" style="height: 80%"></div>
+                                    <div class="bar" style="height: 45%"></div>
+                                    <div class="bar" style="height: 90%"></div>
+                                    <div class="bar" style="height: 70%"></div>
+                                </div>
+                            </div>
+                            <div class="dashboard-stats">
+                                <div class="dashboard-stat">
+                                    <span class="stat-value">$45,230</span>
+                                    <span class="stat-label">Monthly Revenue</span>
+                                </div>
+                                <div class="dashboard-stat">
+                                    <span class="stat-value">92%</span>
+                                    <span class="stat-label">Occupancy Rate</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Property Management?</h2>
+                <p>Join hundreds of property managers who trust Tenanta to streamline their operations</p>
+                <div class="cta-buttons">
+                    <a href="https://forms.gle/gnna1VKr7vneYpWh6" target="_blank" class="btn btn-primary">Request Demo</a>
+                    <a href="contact.html" class="btn btn-outline">Schedule Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-building"></i>
+                        <span>Tenanta</span>
+                    </div>
+                    <p>Comprehensive property management solution for modern landlords and property managers.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/thiararapeter" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.youtube.com/channel/UCG8B01F08eRJE8STS3XkINg" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://github.com/Thiararapeter" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/thiararapeter" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/ThirararaOnline/" target="_blank"><i class="fab fa-facebook"></i></a>
+
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2024</span> Tenanta. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

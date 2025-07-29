@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - Tenanta Property Management</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/pricing.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-building"></i>
+                <span>Tenanta</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="features.html" class="nav-link">Features</a></li>
+                <li><a href="pricing.html" class="nav-link active">Pricing</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="https://forms.gle/gnna1VKr7vneYpWh6" target="_blank" class="nav-link cta-button">Get Started</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pricing-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Simple, Transparent Pricing</h1>
+                <p>Choose the perfect plan for your property management needs. No hidden fees, cancel anytime.</p>
+                <div class="billing-toggle">
+                    <span class="toggle-label">Monthly</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="billing-toggle">
+                        <span class="slider"></span>
+                    </label>
+                    <span class="toggle-label">Annual <span class="discount-badge">Save 20%</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Plans -->
+    <section class="pricing-plans">
+        <div class="container">
+            <div class="plans-grid">
+                <!-- Starter Plan -->
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <h3>Starter</h3>
+                        <p>Perfect for small landlords</p>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount monthly">10</span>
+                            <span class="amount annual" style="display: none;">8</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <div class="annual-note" style="display: none;">Billed annually ($96/year)</div>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i>Up to 10 properties</li>
+                            <li><i class="fas fa-check"></i>Up to 50 units</li>
+                            <li><i class="fas fa-check"></i>Basic tenant management</li>
+                            <li><i class="fas fa-check"></i>Bill creation & tracking</li>
+                            <li><i class="fas fa-check"></i>Payment recording</li>
+                            <li><i class="fas fa-check"></i>Basic reports</li>
+                            <li><i class="fas fa-check"></i>Mobile app access</li>
+                            <li><i class="fas fa-check"></i>Email support</li>
+                        </ul>
+                    </div>
+                    <div class="plan-footer">
+                        <a href="https://forms.gle/gnna1VKr7vneYpWh6" target="_blank" class="btn btn-outline">Request Demo</a>
+                    </div>
+                </div>
+
+                <!-- Professional Plan -->
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="plan-header">
+                        <h3>Professional</h3>
+                        <p>For growing property portfolios</p>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount monthly">50</span>
+                            <span class="amount annual" style="display: none;">40</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <div class="annual-note" style="display: none;">Billed annually ($480/year)</div>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i>Up to 50 properties</li>
+                            <li><i class="fas fa-check"></i>Up to 500 units</li>
+                            <li><i class="fas fa-check"></i>Advanced tenant management</li>
+                            <li><i class="fas fa-check"></i>Automated billing & receipts</li>
+                            <li><i class="fas fa-check"></i>Payment verification</li>
+                            <li><i class="fas fa-check"></i>Advanced analytics</li>
+                            <li><i class="fas fa-check"></i>Maintenance tracking</li>
+                            <li><i class="fas fa-check"></i>Expense management</li>
+                            <li><i class="fas fa-check"></i>Tenant portal</li>
+                            <li><i class="fas fa-check"></i>Priority support</li>
+                        </ul>
+                    </div>
+                    <div class="plan-footer">
+                        <a href="https://forms.gle/gnna1VKr7vneYpWh6" target="_blank" class="btn btn-primary">Request Demo</a>
+                    </div>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <h3>Enterprise</h3>
+                        <p>For large property management companies</p>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount monthly">199</span>
+                            <span class="amount annual" style="display: none;">159</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <div class="annual-note" style="display: none;">Billed annually ($1,908/year)</div>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i>Unlimited properties</li>
+                            <li><i class="fas fa-check"></i>Unlimited units</li>
+                            <li><i class="fas fa-check"></i>Multi-user access</li>
+                            <li><i class="fas fa-check"></i>Custom workflows</li>
+                            <li><i class="fas fa-check"></i>API access</li>
+                            <li><i class="fas fa-check"></i>White-label options</li>
+                            <li><i class="fas fa-check"></i>Advanced integrations</li>
+                            <li><i class="fas fa-check"></i>Custom reports</li>
+                            <li><i class="fas fa-check"></i>Dedicated support</li>
+                            <li><i class="fas fa-check"></i>Training & onboarding</li>
+                        </ul>
+                    </div>
+                    <div class="plan-footer">
+                        <a href="#" class="btn btn-outline">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Comparison -->
+    <section class="feature-comparison">
+        <div class="container">
+            <div class="section-header">
+                <h2>Compare Plans</h2>
+                <p>See what's included in each plan</p>
+            </div>
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Features</th>
+                            <th>Starter</th>
+                            <th>Professional</th>
+                            <th>Enterprise</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Properties</td>
+                            <td>Up to 10</td>
+                            <td>Up to 50</td>
+                            <td>Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td>Units</td>
+                            <td>Up to 50</td>
+                            <td>Up to 500</td>
+                            <td>Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td>Tenant Management</td>
+                            <td><i class="fas fa-check text-green"></i></td>
+                            <td><i class="fas fa-check text-green"></i></td>
+                            <td><i class="fas fa-check text-green"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Billing & Payments</td>
+                            <td><i class="fas fa-check text-green"></i></td>
+                            <td><i class="fas fa-check text-green"></i></td>
+                            <td><i class="fas fa-check text-green"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Mobile App</td>
+                            <td><i class="fas fa-check text-green"></i></td>
+                            <td><i class="fas fa-check text-green"></i></td>
+                            <td><i class="fas fa-check text-green"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Advanced Analytics</td>
+                            <td><i class="fas fa-times text-gray"></i></td>
+                            <td><i class="fas fa-check text-green"></i></td>
+                            <td><i class="fas fa-check text-green"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Maintenance Tracking</td>
+                            <td><i class="fas fa-times text-gray"></i></td>
+                            <td><i class="fas fa-check text-green"></i></td>
+                            <td><i class="fas fa-check text-green"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Tenant Portal</td>
+                            <td><i class="fas fa-times text-gray"></i></td>
+                            <td><i class="fas fa-check text-green"></i></td>
+                            <td><i class="fas fa-check text-green"></i></td>
+                        </tr>
+                        <tr>
+                            <td>API Access</td>
+                            <td><i class="fas fa-times text-gray"></i></td>
+                            <td><i class="fas fa-times text-gray"></i></td>
+                            <td><i class="fas fa-check text-green"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Multi-user Access</td>
+                            <td><i class="fas fa-times text-gray"></i></td>
+                            <td><i class="fas fa-times text-gray"></i></td>
+                            <td><i class="fas fa-check text-green"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Support</td>
+                            <td>Email</td>
+                            <td>Priority</td>
+                            <td>Dedicated</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about our pricing</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Is there a free trial?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We offer a 14-day free trial for all plans. No credit card required to start.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Can I change plans anytime?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! You can upgrade or downgrade your plan at any time. Changes take effect immediately.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What payment methods do you accept?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept all major credit cards, PayPal, and bank transfers for annual plans.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Is my data secure?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We use enterprise-grade security with data encryption, regular backups, and GDPR compliance.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Do you offer discounts for non-profits?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We offer special pricing for non-profit organizations. Contact our sales team for details.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Can I cancel anytime?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can cancel your subscription at any time. No cancellation fees or long-term contracts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Get Started?</h2>
+                <p>Join thousands of property managers who trust Tenanta</p>
+                <div class="cta-buttons">
+                    <a href="https://forms.gle/gnna1VKr7vneYpWh6" target="_blank" class="btn btn-primary">Request Demo</a>
+                    <a href="contact.html" class="btn btn-outline">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-building"></i>
+                        <span>Tenanta</span>
+                    </div>
+                    <p>Comprehensive property management solution for modern landlords and property managers.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/thiararapeter" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.youtube.com/channel/UCG8B01F08eRJE8STS3XkINg" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://github.com/Thiararapeter" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/thiararapeter" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/ThirararaOnline/" target="_blank"><i class="fab fa-facebook"></i></a>
+
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2024</span> Tenanta. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/pricing.js"></script>
+</body>
+</html>
+
+
+
+
+
