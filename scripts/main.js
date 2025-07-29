@@ -81,10 +81,19 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Counter animation for stats
-    function animateCounter(element, target, duration = 2000) {
+    function animateCounter(element, target, duration = 2000, originalText = '') {
+        // Check if this is a hero stat that should preserve formatting
+        const isHeroStat = element.closest('.hero-stats');
+
+        if (isHeroStat) {
+            // For hero stats, preserve the original text with special characters
+            element.textContent = originalText;
+            return;
+        }
+
         let start = 0;
         const increment = target / (duration / 16);
-        
+
         function updateCounter() {
             start += increment;
             if (start < target) {
@@ -94,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 element.textContent = target;
             }
         }
-        
+
         updateCounter();
     }
 
@@ -103,10 +112,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const statObserver = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const target = parseInt(entry.target.textContent.replace(/[^\d]/g, ''));
+                const originalText = entry.target.textContent;
+                const target = parseInt(originalText.replace(/[^\d]/g, ''));
                 if (target && !entry.target.classList.contains('animated')) {
                     entry.target.classList.add('animated');
-                    animateCounter(entry.target, target);
+                    animateCounter(entry.target, target, 2000, originalText);
                 }
             }
         });
@@ -210,7 +220,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.showFieldError = showFieldError;
 
     // Loading state helper
-    function showLoadingState(button, isLoading) {
+    function setLoadingState(button, isLoading) {
         if (isLoading) {
             button.classList.add('loading');
             button.disabled = true;
@@ -245,7 +255,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Expose helper functions globally
-    window.showLoadingState = showLoadingState;
+    window.setLoadingState = setLoadingState;
     window.showSuccessMessage = showSuccessMessage;
 
     // Initialize phone mockup functionality
@@ -405,9 +415,6 @@ function handleMenuItemClick(menuText) {
             break;
     }
 }
-
-// Make handleMenuItemClick available immediately
-window.handleMenuItemClick = handleMenuItemClick;
 
 function showLoadingState() {
     const appContent = document.querySelector('.app-content');
@@ -1064,7 +1071,9 @@ function animateCounterTo(element, target, prefix = '') {
     element.style.color = '#1f2937';
 }
 
-
+// Make functions globally available
+window.toggleSidebar = toggleSidebar;
+window.handleMenuItemClick = handleMenuItemClick;
 
 
 
