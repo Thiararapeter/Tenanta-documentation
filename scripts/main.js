@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.showFieldError = showFieldError;
 
     // Loading state helper
-    function setLoadingState(button, isLoading) {
+    function showLoadingState(button, isLoading) {
         if (isLoading) {
             button.classList.add('loading');
             button.disabled = true;
@@ -245,7 +245,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Expose helper functions globally
-    window.setLoadingState = setLoadingState;
+    window.showLoadingState = showLoadingState;
     window.showSuccessMessage = showSuccessMessage;
 
     // Initialize phone mockup functionality
@@ -405,6 +405,9 @@ function handleMenuItemClick(menuText) {
             break;
     }
 }
+
+// Make handleMenuItemClick available immediately
+window.handleMenuItemClick = handleMenuItemClick;
 
 function showLoadingState() {
     const appContent = document.querySelector('.app-content');
@@ -1061,9 +1064,7 @@ function animateCounterTo(element, target, prefix = '') {
     element.style.color = '#1f2937';
 }
 
-// Make functions globally available
-window.toggleSidebar = toggleSidebar;
-window.handleMenuItemClick = handleMenuItemClick;
+
 
 
 
