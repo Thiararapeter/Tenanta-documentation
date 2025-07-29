@@ -176,7 +176,7 @@
                     </div>
                     <h3>Documentation</h3>
                     <p>Comprehensive guides and tutorials to help you get the most out of Tenanta.</p>
-                    <a href="#" class="support-link">Browse Docs <i class="fas fa-arrow-right"></i></a>
+                    <a href="#" class="support-link" onclick="showComingSoon(event, 'Documentation')">Browse Docs <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="support-card">
                     <div class="support-icon">
@@ -184,7 +184,7 @@
                     </div>
                     <h3>Community Forum</h3>
                     <p>Connect with other Tenanta users, share tips, and get answers from the community.</p>
-                    <a href="#" class="support-link">Join Community <i class="fas fa-arrow-right"></i></a>
+                    <a href="#" class="support-link" onclick="showComingSoon(event, 'Community Forum')">Join Community <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="support-card">
                     <div class="support-icon">
@@ -192,7 +192,7 @@
                     </div>
                     <h3>Video Tutorials</h3>
                     <p>Step-by-step video guides covering all aspects of property management with Tenanta.</p>
-                    <a href="#" class="support-link">Watch Videos <i class="fas fa-arrow-right"></i></a>
+                    <a href="#" class="support-link" onclick="showComingSoon(event, 'Video Tutorials')">Watch Videos <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="support-card">
                     <div class="support-icon">
@@ -200,7 +200,7 @@
                     </div>
                     <h3>Schedule Demo</h3>
                     <p>Book a personalized demo with our team to see how Tenanta can work for your business.</p>
-                    <a href="#" class="support-link">Book Demo <i class="fas fa-arrow-right"></i></a>
+                    <a href="#" class="support-link" onclick="showComingSoon(event, 'Schedule Demo')">Book Demo <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -257,8 +257,79 @@
         </div>
     </footer>
 
+    <!-- Coming Soon Modal -->
+    <div id="comingSoonModal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Feature Coming Soon</h3>
+                <button class="modal-close" onclick="closeComingSoonModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="progress-icon">
+                    <i class="fas fa-cog fa-spin"></i>
+                </div>
+                <p id="modalMessage">This feature is currently in development and will be available soon!</p>
+                <div class="progress-status">
+                    <span class="status-badge">In Progress</span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="closeComingSoonModal()">Got it!</button>
+            </div>
+        </div>
+    </div>
+
     <script src="scripts/main.js"></script>
     <script src="scripts/contact.js"></script>
+
+    <script>
+        function showComingSoon(event, featureName) {
+            event.preventDefault();
+
+            const modal = document.getElementById('comingSoonModal');
+            const title = document.getElementById('modalTitle');
+            const message = document.getElementById('modalMessage');
+
+            title.textContent = featureName + ' - Coming Soon';
+            message.textContent = `We're working hard to bring you ${featureName}. This feature will be updated soon and will be available in the next release!`;
+
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+
+            // Add animation
+            setTimeout(() => {
+                modal.querySelector('.modal-content').style.transform = 'scale(1)';
+                modal.querySelector('.modal-content').style.opacity = '1';
+            }, 10);
+        }
+
+        function closeComingSoonModal() {
+            const modal = document.getElementById('comingSoonModal');
+            const modalContent = modal.querySelector('.modal-content');
+
+            modalContent.style.transform = 'scale(0.9)';
+            modalContent.style.opacity = '0';
+
+            setTimeout(() => {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }, 200);
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('comingSoonModal').addEventListener('click', function(event) {
+            if (event.target === this) {
+                closeComingSoonModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeComingSoonModal();
+            }
+        });
+    </script>
 </body>
 </html>
 

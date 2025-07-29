@@ -81,26 +81,26 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Counter animation for stats
-    function animateCounter(element, target, duration = 2000, originalText = '') {
-        // Check if this is a hero stat that should preserve formatting
-        const isHeroStat = element.closest('.hero-stats');
-
-        if (isHeroStat) {
-            // For hero stats, preserve the original text with special characters
-            element.textContent = originalText;
-            return;
-        }
-
+    function animateCounter(element, target, suffix = '', duration = 2000) {
         let start = 0;
         const increment = target / (duration / 16);
+        const isDecimal = target % 1 !== 0;
 
         function updateCounter() {
             start += increment;
             if (start < target) {
-                element.textContent = Math.floor(start);
+                if (isDecimal) {
+                    element.textContent = start.toFixed(1) + suffix;
+                } else {
+                    element.textContent = Math.floor(start) + suffix;
+                }
                 requestAnimationFrame(updateCounter);
             } else {
-                element.textContent = target;
+                if (isDecimal) {
+                    element.textContent = target.toFixed(1) + suffix;
+                } else {
+                    element.textContent = target + suffix;
+                }
             }
         }
 
@@ -113,10 +113,26 @@ document.addEventListener('DOMContentLoaded', function() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const originalText = entry.target.textContent;
-                const target = parseInt(originalText.replace(/[^\d]/g, ''));
+
+                // Handle different formats
+                let target, suffix = '';
+
+                if (originalText.includes('%')) {
+                    // Handle percentage like "99.9%"
+                    target = parseFloat(originalText.replace(/[^\d.]/g, ''));
+                    suffix = '%';
+                } else if (originalText.includes('+')) {
+                    // Handle numbers with plus like "10+"
+                    target = parseInt(originalText.replace(/[^\d]/g, ''));
+                    suffix = '+';
+                } else {
+                    // Handle plain numbers
+                    target = parseInt(originalText.replace(/[^\d]/g, ''));
+                }
+
                 if (target && !entry.target.classList.contains('animated')) {
                     entry.target.classList.add('animated');
-                    animateCounter(entry.target, target, 2000, originalText);
+                    animateCounter(entry.target, target, suffix);
                 }
             }
         });

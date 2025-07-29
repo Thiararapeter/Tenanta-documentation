@@ -12,10 +12,27 @@ body {
     overflow-x: hidden;
 }
 
+/* Ensure proper mobile viewport */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/* Improve touch targets on mobile */
+@media (max-width: 768px) {
+    button,
+    .btn,
+    a {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    width: 100%;
 }
 
 /* Navigation */
@@ -45,6 +62,13 @@ body {
     font-size: 1.5rem;
     font-weight: 700;
     color: #2563eb;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.nav-logo:hover {
+    color: #1d4ed8;
+    transform: translateY(-1px);
 }
 
 .nav-logo i {
@@ -1736,6 +1760,10 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -1747,6 +1775,7 @@ body {
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
         padding: 2rem 0;
+        z-index: 999;
     }
 
     .nav-menu.active {
@@ -1776,37 +1805,72 @@ body {
     .hero-container {
         grid-template-columns: 1fr;
         text-align: center;
+        padding: 0 15px;
     }
 
     .hero-title {
         font-size: 2.5rem;
+        line-height: 1.2;
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        padding: 1rem 2rem;
+        font-size: 1rem;
     }
 
     .features-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
     .benefits-content {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 2rem;
     }
 
     .footer-bottom {
         flex-direction: column;
         gap: 1rem;
+        text-align: center;
     }
 
     .hero-stats {
         justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
     }
 
     .cta-buttons {
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .section-header p {
+        font-size: 1rem;
     }
 }
 
@@ -1822,11 +1886,20 @@ body {
         font-size: 2.8rem;
     }
 
+    .app-mockup {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
     .phone-frame {
         width: 280px;
         height: 560px;
         padding: 16px;
         transform: rotate(0deg);
+        margin: 0 auto;
     }
 
     .phone-frame::before {
@@ -1837,19 +1910,108 @@ body {
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .hero {
+        padding: 100px 0 60px;
+    }
+
     .hero-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
+        line-height: 1.1;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .app-mockup {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
     }
 
     .phone-frame {
-        width: 240px;
-        height: 480px;
-        padding: 14px;
-        border-radius: 25px;
+        width: 220px;
+        height: 440px;
+        padding: 12px;
+        border-radius: 20px;
+        margin: 0 auto;
     }
 
     .screen {
-        border-radius: 18px;
+        border-radius: 15px;
+    }
+
+    .btn {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.75rem;
+    }
+
+    .section-header p {
+        font-size: 0.95rem;
+    }
+
+    .feature-card {
+        padding: 1.5rem;
+    }
+
+    .feature-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .nav-logo {
+        font-size: 1.3rem;
+    }
+
+    .nav-logo i {
+        font-size: 1.5rem;
+    }
+}
+
+/* Extra small devices (320px and below) */
+@media (max-width: 320px) {
+    .container {
+        padding: 0 8px;
+    }
+
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+    .btn {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.85rem;
+    }
+
+    .phone-frame {
+        width: 200px;
+        height: 400px;
+        padding: 10px;
+    }
+
+    .nav-logo {
+        font-size: 1.2rem;
+    }
+
+    .nav-logo i {
+        font-size: 1.3rem;
     }
 }
 
