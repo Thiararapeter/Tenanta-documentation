@@ -307,5 +307,44 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     };
 
+    // Interactive Demo functionality
+    const demoCards = document.querySelectorAll('.demo-card');
+    const demoContents = document.querySelectorAll('.demo-content');
+
+    function switchDemo(targetDemo) {
+        // Remove active class from all demo cards and contents
+        demoCards.forEach(card => card.classList.remove('active'));
+        demoContents.forEach(content => content.classList.remove('active'));
+
+        // Add active class to clicked card and corresponding content
+        const targetCard = document.querySelector(`[data-demo="${targetDemo}"]`);
+        const targetContent = document.getElementById(`demo-${targetDemo}`);
+
+        if (targetCard && targetContent) {
+            targetCard.classList.add('active');
+            targetContent.classList.add('active');
+        }
+    }
+
+    // Add click event listeners to demo cards
+    demoCards.forEach(card => {
+        card.addEventListener('click', function() {
+            const demo = this.getAttribute('data-demo');
+            switchDemo(demo);
+        });
+    });
+
+    // Auto-cycle through demos (optional)
+    let currentDemoIndex = 0;
+    const demoTypes = ['dashboard', 'properties', 'tenants', 'billing'];
+
+    function autoCycleDemo() {
+        currentDemoIndex = (currentDemoIndex + 1) % demoTypes.length;
+        switchDemo(demoTypes[currentDemoIndex]);
+    }
+
+    // Auto-cycle every 5 seconds (uncomment to enable)
+    // setInterval(autoCycleDemo, 5000);
+
     console.log('Features page JavaScript loaded successfully!');
 });

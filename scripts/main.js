@@ -1,6 +1,12 @@
 // Main JavaScript file for Tenanta website
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Update footer year automatically
+    const currentYearElement = document.getElementById('current-year');
+    if (currentYearElement) {
+        currentYearElement.textContent = new Date().getFullYear();
+    }
+
     // Mobile Navigation Toggle
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
@@ -81,29 +87,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Counter animation for stats
-    function animateCounter(element, target, suffix = '', duration = 2000) {
+    function animateCounter(element, target, duration = 2000) {
         let start = 0;
         const increment = target / (duration / 16);
-        const isDecimal = target % 1 !== 0;
-
+        
         function updateCounter() {
             start += increment;
             if (start < target) {
-                if (isDecimal) {
-                    element.textContent = start.toFixed(1) + suffix;
-                } else {
-                    element.textContent = Math.floor(start) + suffix;
-                }
+                element.textContent = Math.floor(start);
                 requestAnimationFrame(updateCounter);
             } else {
-                if (isDecimal) {
-                    element.textContent = target.toFixed(1) + suffix;
-                } else {
-                    element.textContent = target + suffix;
-                }
+                element.textContent = target;
             }
         }
-
+        
         updateCounter();
     }
 
@@ -112,27 +109,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const statObserver = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const originalText = entry.target.textContent;
-
-                // Handle different formats
-                let target, suffix = '';
-
-                if (originalText.includes('%')) {
-                    // Handle percentage like "99.9%"
-                    target = parseFloat(originalText.replace(/[^\d.]/g, ''));
-                    suffix = '%';
-                } else if (originalText.includes('+')) {
-                    // Handle numbers with plus like "10+"
-                    target = parseInt(originalText.replace(/[^\d]/g, ''));
-                    suffix = '+';
-                } else {
-                    // Handle plain numbers
-                    target = parseInt(originalText.replace(/[^\d]/g, ''));
-                }
-
+                const target = parseInt(entry.target.textContent.replace(/[^\d]/g, ''));
                 if (target && !entry.target.classList.contains('animated')) {
                     entry.target.classList.add('animated');
-                    animateCounter(entry.target, target, suffix);
+                    animateCounter(entry.target, target);
                 }
             }
         });
